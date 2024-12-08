@@ -19,9 +19,9 @@ ________________________________________
   - Total Profit
   - Date selector for weekly and monthly insights.
   - Real-time updates via Kafka integration.
-**Dynamic Forms**
+- **Dynamic Forms**
   - Automatically update price and profit fields based on user input and item selection.
-**Real-time Notifications**
+- **Real-time Notifications**
   - Publish stock transactions to Kafka topics.
   - Real-time updates displayed on the dashboard.
 ________________________________________
