@@ -8,17 +8,17 @@ ________________________________________
   - Secure login functionality using Django’s built-in authentication system.
   - Prevents unauthorized access to sensitive data.
 - **CRUD Operations**
-•	Create: Add new inventory items.
-•	Read: View all items with stock balance, purchase price, and sale price.
-•	Update: Modify item details.
-•	Delete: Remove obsolete items.
-Dashboard
-•	Displays analytics like:
-o	Total Purchase Value
-o	Total Sales Value
-o	Total Profit
-•	Date selector for weekly and monthly insights.
-•	Real-time updates via Kafka integration.
+  - Create: Add new inventory items.
+  - Read: View all items with stock balance, purchase price, and sale price.
+  - Update: Modify item details.
+  - Delete: Remove obsolete items.
+**Dashboard**
+  - Displays analytics like:
+  - Total Purchase Value
+  - Total Sales Value
+  - Total Profit
+  - Date selector for weekly and monthly insights.
+  - Real-time updates via Kafka integration.
 Dynamic Forms
 •	Automatically update price and profit fields based on user input and item selection.
 Real-time Notifications
