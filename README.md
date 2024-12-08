@@ -31,20 +31,20 @@ ________________________________________
    - Framework: Django
    - Handles server-side logic, transaction processing, and database operations.
 - **Frontend**
- - Technologies: HTML, CSS, and JavaScript
- - Provides responsive and user-friendly interfaces.
+   - Technologies: HTML, CSS, and JavaScript
+   - Provides responsive and user-friendly interfaces.
 - **Database**
-•	AWS RDS (MySQL)
-o	Robust, scalable data storage.
-o	Multi-AZ deployment for high availability.
-Hadoop
-•	Batch processing of large datasets using:
-o	HDFS (Hadoop Distributed File System) for storage.
-o	MapReduce jobs for calculating total sales and profits.
-Apache Kafka
-•	Real-time data streaming for:
-o	Publishing stock transactions.
-o	Dashboard updates.
+   - AWS RDS (MySQL)
+   - Robust, scalable data storage.
+   - Multi-AZ deployment for high availability.
+- **Hadoop**
+  - Batch processing of large datasets using:
+    - HDFS (Hadoop Distributed File System) for storage.
+    - MapReduce jobs for calculating total sales and profits.
+- **Apache Kafka**
+- Real-time data streaming for:
+    - Publishing stock transactions.
+    - Dashboard updates.
 ________________________________________
 Setup Instructions
 Prerequisites
