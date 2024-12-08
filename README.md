@@ -87,5 +87,14 @@ ________________________________________
 **Contributors:**
  - NSHUNGUYIMFURA Abou-Bakar : 223028093
     - System design and Archtecture
+    - AWS MySql Database Integration
+    - Kafka Integration
+    - Hadoop Setup and MapReduce Workflow
  - UWIMBABAZI Rosine : 223028217
+    - System Testing
+    - Fronted Development
  - NSABIYERA Enock : 213001787
+    - User Interfance Development
+    - Documentation:
+        - Project Report
+        - Readme
