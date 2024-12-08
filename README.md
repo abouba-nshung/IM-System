@@ -84,4 +84,7 @@ ________________________________________
     - Challenge: Efficiently processing datasets with Hadoop.
     - Solution: Optimized MapReduce logic and ensured proper HDFS configuration.
 ________________________________________
-
+**Contributors:**
+ - NSHUNGUYIMFURA Abou-Bakar : 223028093
+ - UWIMBABAZI Rosine : 223028217
+ - NSABIYERA Enock : 213001787
