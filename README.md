@@ -1,7 +1,7 @@
 - **Inventory Management System** 
   - **Introduction**
--The Inventory Management System is a Django-based web application designed to streamline inventory management, ensure real-time analytics, and enhance scalability. 
-It leverages cloud services and big data tools like Hadoop and Apache Kafka to handle large datasets and provide real-time updates.
+- The Inventory Management System is a Django-based web application designed to streamline inventory management, ensure real-time analytics, and enhance scalability. 
+- It leverages cloud services and big data tools like Hadoop and Apache Kafka to handle large datasets and provide real-time updates.
 ________________________________________
 Features
 Authentication System
