@@ -46,13 +46,13 @@ ________________________________________
     - Publishing stock transactions.
     - Dashboard updates.
 ________________________________________
-Setup Instructions
-Prerequisites
-•	Python 3.8 or above
-•	Django 4.x
-•	Apache Kafka
-•	Hadoop (Local setup)
-•	AWS RDS MySQL (Configured)
+**Setup Instructions**
+- **Prerequisites**
+  - Python 3.8 or above
+  - Django 4.x
+  - Apache Kafka
+  - Hadoop (Local setup)
+  - AWS RDS MySQL (Configured)
 
 
 Configure Database
