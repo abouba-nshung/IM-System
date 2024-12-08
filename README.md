@@ -42,7 +42,7 @@ ________________________________________
     - HDFS (Hadoop Distributed File System) for storage.
     - MapReduce jobs for calculating total sales and profits.
 - **Apache Kafka**
-- Real-time data streaming for:
+  - Real-time data streaming for:
     - Publishing stock transactions.
     - Dashboard updates.
 ________________________________________
