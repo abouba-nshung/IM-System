@@ -57,7 +57,7 @@ ________________________________________
 
 **Configure Database**
   - Update settings.py with your AWS RDS MySQL credentials.
-**Run Migrations**
+- **Run Migrations**
   - python manage.py makemigrations
   - python manage.py migrate
 - **Start the Server**
