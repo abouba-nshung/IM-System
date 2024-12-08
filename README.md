@@ -86,5 +86,6 @@ ________________________________________
 ________________________________________
 **Contributors:**
  - NSHUNGUYIMFURA Abou-Bakar : 223028093
+    - System design and Archtecture
  - UWIMBABAZI Rosine : 223028217
  - NSABIYERA Enock : 213001787
