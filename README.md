@@ -92,7 +92,7 @@ ________________________________________
     - Hadoop Setup and MapReduce Workflow
  - UWIMBABAZI Rosine : 223028217
     - System Testing
-    - Fronted Development
+    - Frontend Development
  - NSABIYERA Enock : 213001787
     - User Interfance Development
     - Documentation:
