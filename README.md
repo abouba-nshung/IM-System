@@ -55,33 +55,33 @@ ________________________________________
   - AWS RDS MySQL (Configured)
 
 
-Configure Database
-•	Update settings.py with your AWS RDS MySQL credentials.
-Run Migrations
-•	python manage.py makemigrations
-•	python manage.py migrate
-Start the Server
-•	python manage.py runserver
-Start Kafka
-•	Configure and start Zookeeper.
-•	Start Kafka broker.
-•	Create Kafka topics for stock transactions.
-Hadoop Setup
-•	Set up HDFS locally.
-•	Upload transaction_data.csv to HDFS.
-•	Run the MapReduce job for analytics.
-Access Application
-•	Open the application in a web browser at http://127.0.0.1:8000.
+**Configure Database**
+  - Update settings.py with your AWS RDS MySQL credentials.
+**Run Migrations**
+  - python manage.py makemigrations
+  - python manage.py migrate
+**Start the Server**
+  - python manage.py runserver
+**Start Kafka**
+  - Configure and start Zookeeper.
+  - Start Kafka broker.
+  - Create Kafka topics for stock transactions.
+**Hadoop Setup**
+  - Set up HDFS locally.
+  - Upload transaction_data.csv to HDFS.
+  - Run the MapReduce job for analytics.
+**Access Application**
+  - Open the application in a web browser at http://127.0.0.1:8000.
 ________________________________________
-Challenges and Solutions
-Database Connectivity
-•	Challenge: Errors during AWS RDS integration.
-•	Solution: Verified RDS endpoints, IAM roles, and security group settings.
-Real-Time Updates
-•	Challenge: Setting up Kafka with Zookeeper.
-•	Solution: Debugged configurations using Python’s Kafka library.
-Big Data Processing
-•	Challenge: Efficiently processing datasets with Hadoop.
-•	Solution: Optimized MapReduce logic and ensured proper HDFS configuration.
+**Challenges and Solutions**
+ - Database Connectivity
+    - Challenge: Errors during AWS RDS integration.
+    - Solution: Verified RDS endpoints, IAM roles, and security group settings.
+ - Real-Time Updates
+    - Challenge: Setting up Kafka with Zookeeper.
+    - Solution: Debugged configurations using Python’s Kafka library.
+ - Big Data Processing
+    - Challenge: Efficiently processing datasets with Hadoop.
+    - Solution: Optimized MapReduce logic and ensured proper HDFS configuration.
 ________________________________________
 
