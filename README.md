@@ -28,8 +28,8 @@ ________________________________________
 
 **Architecture and Integration**
 - **Backend**
- - Framework: Django
- - Handles server-side logic, transaction processing, and database operations.
+   - Framework: Django
+   - Handles server-side logic, transaction processing, and database operations.
 - **Frontend**
  - Technologies: HTML, CSS, and JavaScript
  - Provides responsive and user-friendly interfaces.
