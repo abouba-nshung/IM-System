@@ -12,7 +12,7 @@ ________________________________________
   - Read: View all items with stock balance, purchase price, and sale price.
   - Update: Modify item details.
   - Delete: Remove obsolete items.
-**Dashboard**
+- **Dashboard**
   - Displays analytics like:
   - Total Purchase Value
   - Total Sales Value
