@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Add Category{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Add New Category</h2>
+    <form method="POST" class="form">
+        {% csrf_token %}
+        
+        <!-- Category Form -->
+        <div class="form-group">
+            {{ form.as_p }}
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit" class="btn">Save Category</button>
+        </div>
+    </form>
+
+    <!-- Back Button -->
+    <div class="form-group">
+        <a href="{% url 'category_list' %}" class="btn back-btn">Back to Category List</a>
+    </div>
+</div>
+{% endblock %}

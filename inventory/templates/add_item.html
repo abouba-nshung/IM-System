@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Add Item{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Add New Item</h2>
+    <form method="post" class="form">
+        {% csrf_token %}
+        
+        <!-- Item Name -->
+        <div class="form-group">
+            <label for="item_name">Item Name:</label>
+            <input type="text" id="item_name" name="item_name" placeholder="Enter item name" required>
+        </div>
+        
+        <!-- Unit -->
+        <div class="form-group">
+            <label for="unit">Unit:</label>
+            <input type="text" id="unit" name="unit" placeholder="Enter unit (e.g., pcs, kg)" required>
+        </div>
+        
+        <!-- Purchase Price -->
+        <div class="form-group">
+            <label for="purchase_price">Purchase Price:</label>
+            <input type="number" id="purchase_price" name="purchase_price" placeholder="Enter purchase price" step="0.01" required>
+        </div>
+        
+        <!-- Sale Price -->
+        <div class="form-group">
+            <label for="sale_price">Sale Price:</label>
+            <input type="number" id="sale_price" name="sale_price" placeholder="Enter sale price" step="0.01" required>
+        </div>
+        
+        <!-- Supplier -->
+        <div class="form-group">
+            <label for="supplier">Supplier:</label>
+            <select name="supplier" id="supplier" required>
+                <option value="">Select Supplier</option>
+                {% for supplier in suppliers %}
+                <option value="{{ supplier.id }}">{{ supplier.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <!-- Category -->
+        <div class="form-group">
+            <label for="category">Category:</label>
+            <select name="category" id="category" required>
+                <option value="">Select Category</option>
+                {% for category in categories %}
+                <option value="{{ category.id }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit" class="btn">Add Item</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+

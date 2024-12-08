@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Supplier{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Edit Supplier</h2>
+    
+    <!-- Supplier Edit Form -->
+    <form method="POST" class="form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        
+        <!-- Submit and Back Buttons -->
+        <div class="form-group">
+            <button type="submit" class="btn">Update</button>
+            <br>
+            <br>
+            <a href="{% url 'supplier_list' %}" class="btn back-btn">Back to Supplier List</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

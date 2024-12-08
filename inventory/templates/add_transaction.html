@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block title %}Add Transaction{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Add New Transaction</h2>
+    <form method="POST" class="form">
+        {% csrf_token %}
+
+        <!-- Item Selection -->
+        <div class="form-group">
+            <label for="item">Item:</label>
+            <select id="item" name="item" required>
+                <option value="">Select Item</option>
+                {% for item in items %}
+                <option value="{{ item.id }}" data-purchase-price="{{ item.purchase_price }}" data-sale-price="{{ item.sale_price }}">
+                    {{ item.name }}
+                </option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <!-- Transaction Type Selection -->
+        <div class="form-group">
+            <label for="transaction_type">Transaction Type:</label>
+            <select id="transaction_type" name="transaction_type" required>
+                <option value="">Select Type</option>
+                <option value="stock_in">Stock IN</option>
+                <option value="stock_out">Stock OUT</option>
+            </select>
+        </div>
+
+        <!-- Quantity Input -->
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" placeholder="Enter quantity" required>
+        </div>
+
+        <!-- Price Field -->
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="text" id="price" name="price" readonly>
+        </div>
+
+        <!-- Profit Field -->
+        <div class="form-group">
+            <label for="profit">Profit:</label>
+            <input type="text" id="profit" name="profit" readonly>
+        </div>
+
+        <!-- Date Field -->
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value="{{ today }}" required>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-group">
+            <button type="submit" class="btn">Add Transaction</button>
+        </div>
+    </form>
+</div>
+
+<!-- JavaScript Section -->
+<script>
+    const itemSelect = document.getElementById('item');
+    const transactionTypeSelect = document.getElementById('transaction_type');
+    const priceInput = document.getElementById('price');
+    const profitInput = document.getElementById('profit');
+    const quantityInput = document.getElementById('quantity');
+
+    function updateFields() {
+        const selectedItem = itemSelect.options[itemSelect.selectedIndex];
+        const transactionType = transactionTypeSelect.value;
+        const quantity = parseFloat(quantityInput.value) || 0;
+
+        // Update price and profit based on transaction type
+        if (transactionType === "stock_in") {
+            priceInput.value = selectedItem.dataset.purchasePrice || "";
+            profitInput.value = ""; // No profit for Stock In
+        } else if (transactionType === "stock_out") {
+            const purchasePrice = parseFloat(selectedItem.dataset.purchasePrice) || 0;
+            const salePrice = parseFloat(selectedItem.dataset.salePrice) || 0;
+
+            priceInput.value = salePrice || "";
+            profitInput.value = (quantity * (salePrice - purchasePrice)).toFixed(2) || "";
+        } else {
+            priceInput.value = "";
+            profitInput.value = ""; // Clear fields for invalid transaction type
+        }
+    }
+
+    // Event Listeners
+    itemSelect.addEventListener('change', updateFields);
+    transactionTypeSelect.addEventListener('change', updateFields);
+    quantityInput.addEventListener('input', updateFields);
+</script>
+{% endblock %}

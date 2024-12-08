@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Category List{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="page-title">Category List</h1>
+</div>
+<!--
+<div class="action-button">
+    <a href="{% url 'add_category' %}" class="btn btn-success">Add Category</a>
+</div> -->
+
+<br>
+    <!-- Add Item Button -->
+    <a href="{% url 'add_category' %}" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">Add Category</a>
+    <br><br>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for category in categories %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ category.name }}</td>
+            <td>
+                <a href="{% url 'edit_category' category.id %}">Edit</a> |
+                <a href="{% url 'delete_category' category.id %}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

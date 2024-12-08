@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Supplier List{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1 class="page-title">Supplier List</h1>
+</div>
+
+<!-- Add Supplier Button 
+<div class="action-button">
+    <a href="{% url 'add_supplier' %}" class="btn btn-success">Add Supplier</a>
+</div> -->
+
+<br>
+    <!-- Add Item Button -->
+    <a href="{% url 'add_supplier' %}" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">Add Supplier</a>
+    <br><br>
+
+<!-- Supplier Table -->
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>City</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for supplier in suppliers %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ supplier.name }}</td>
+            <td>{{ supplier.city }}</td>
+            <td>{{ supplier.phone_number }}</td>
+            <td>{{ supplier.email }}</td>
+            <td>
+                <a href="{% url 'edit_supplier' supplier.id %}" class="action-link">Edit</a> |
+                <a href="{% url 'delete_supplier' supplier.id %}" class="action-link">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

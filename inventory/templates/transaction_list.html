@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}Transaction List{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2>Transaction List</h2>
+
+
+    <!-- Add Transaction Button -->
+    <!-- <div class="action-btn">
+        <a href="{% url 'add_transaction' %}" class="btn btn-add">Add Transaction</a>
+    </div> -->
+    <br>
+    <!-- Add Item Button -->
+    <a href="{% url 'add_transaction' %}" style="display: inline-block; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">Add Transaction</a>
+    <br><br>
+    <!-- Transactions Table -->
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Item</th>
+                <th>Transaction Type</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Profit</th>
+                <th>Total</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in page_obj %}
+                <tr>
+                    <td>{{ transaction.id }}</td>
+                    <td>{{ transaction.item }}</td>
+                    <td>{{ transaction.transaction_type }}</td>
+                    <td>{{ transaction.quantity }}</td>
+                    <td>{{ transaction.price }}</td>
+                    <td>{{ transaction.profit }}</td>
+                    <td>{{ transaction.total }}</td>
+                    <td>{{ transaction.date }}</td>
+                    <td>
+                        <a href="{% url 'delete_transaction' transaction.id %}" class="btn btn-delete">Delete</a>
+                    </td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="9" class="no-data">No transactions found</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <!-- Pagination -->
+    <div class="pagination">
+        <span class="step-links">
+            {% if page_obj.has_previous %}
+                <a href="?page=1">&laquo; First</a>
+                <a href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            <span class="current">
+                Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+            </span>
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}">Last &raquo;</a>
+            {% endif %}
+        </span>
+    </div>
+</div>
+{% endblock %}
+

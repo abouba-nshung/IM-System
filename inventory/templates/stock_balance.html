@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Stock Balance{% endblock %}
+
+{% block content %}
+<!-- Page Title -->
+<div class="page-header">
+    <h1 class="page-title">Stock Balance</h1>
+</div>
+
+<!-- Stock Balance Table -->
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Item</th>
+                <th>Stock Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in stock_balances %}
+            <tr>
+                <td>{{ stock.item.name }}</td>
+                <td>{{ stock.item_balance }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="2">No stock balance available.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

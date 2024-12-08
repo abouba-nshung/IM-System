@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Delete Supplier{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Delete Supplier</h2>
+    <p>Are you sure you want to delete "<strong>{{ supplier.name }}</strong>"?</p>
+    
+    <!-- Confirmation Form -->
+    <form method="POST" class="form">
+        {% csrf_token %}
+        <div class="form-group">
+            <button type="submit" class="btn delete-btn">Yes, Delete</button>
+            <a href="{% url 'supplier_list' %}" class="btn back-btn">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
