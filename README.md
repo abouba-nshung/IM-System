@@ -13,7 +13,7 @@ ________________________________________
   - Update: Modify item details.
   - Delete: Remove obsolete items.
 - **Dashboard**
-  - Displays analytics like:
+  Displays analytics like:
   - Total Purchase Value
   - Total Sales Value
   - Total Profit
