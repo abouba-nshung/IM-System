@@ -60,17 +60,17 @@ ________________________________________
 **Run Migrations**
   - python manage.py makemigrations
   - python manage.py migrate
-**Start the Server**
+- **Start the Server**
   - python manage.py runserver
-**Start Kafka**
+- **Start Kafka**
   - Configure and start Zookeeper.
   - Start Kafka broker.
   - Create Kafka topics for stock transactions.
-**Hadoop Setup**
+- **Hadoop Setup**
   - Set up HDFS locally.
   - Upload transaction_data.csv to HDFS.
   - Run the MapReduce job for analytics.
-**Access Application**
+- **Access Application**
   - Open the application in a web browser at http://127.0.0.1:8000.
 ________________________________________
 **Challenges and Solutions**
