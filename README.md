@@ -26,14 +26,14 @@ ________________________________________
   - Real-time updates displayed on the dashboard.
 ________________________________________
 
-Architecture and Integration
-Backend
-•	Framework: Django
-•	Handles server-side logic, transaction processing, and database operations.
-Frontend
-•	Technologies: HTML, CSS, and JavaScript
-•	Provides responsive and user-friendly interfaces.
-Database
+**Architecture and Integration**
+- **Backend**
+ - Framework: Django
+ - Handles server-side logic, transaction processing, and database operations.
+- **Frontend**
+ - Technologies: HTML, CSS, and JavaScript
+ - Provides responsive and user-friendly interfaces.
+- **Database**
 •	AWS RDS (MySQL)
 o	Robust, scalable data storage.
 o	Multi-AZ deployment for high availability.
