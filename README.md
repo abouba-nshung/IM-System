@@ -13,12 +13,12 @@ ________________________________________
   - Update: Modify item details.
   - Delete: Remove obsolete items.
 - **Dashboard**
-- Displays analytics like:
-  - Total Purchase Value
-  - Total Sales Value
-  - Total Profit
-  - Date selector for weekly and monthly insights.
-  - Real-time updates via Kafka integration.
+  - Displays analytics like:
+     - Total Purchase Value
+     - Total Sales Value
+     - Total Profit
+     - Date selector for weekly and monthly insights.
+     - Real-time updates via Kafka integration.
 - **Dynamic Forms**
   - Automatically update price and profit fields based on user input and item selection.
 - **Real-time Notifications**
