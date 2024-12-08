@@ -41,7 +41,7 @@ ________________________________________
   - Batch processing of large datasets using:
     - HDFS (Hadoop Distributed File System) for storage.
     - MapReduce jobs for calculating total sales and profits.
-- **Apache Kafka**
+**Apache Kafka**
 - Real-time data streaming for:
     - Publishing stock transactions.
     - Dashboard updates.
